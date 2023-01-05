@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from "react";
+import { useState } from "react";
 import './App.css';
+import Control from './components/Control/Control';
+import Playfield from './components/Playfield/Playfield';
+import { shuffleArray } from "./functions";
 
 function App() {
+  const [cardsData, setcardsData] = useState([]);
+
+  async function fetchDate() {
+    fetch('https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json?_limit=24')
+      .then((response) => response.json())
+      .then((data) => {
+        const shuffledArray = shuffleArray(data);
+        setcardsData(shuffledArray);
+      })
+  }
+
+  React.useEffect(() => {
+    fetchDate();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Control />
+      <Playfield data={cardsData}/>
     </div>
-  );
+  )
 }
 
 export default App;

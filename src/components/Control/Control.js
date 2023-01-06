@@ -4,12 +4,14 @@ import { useState } from "react";
 
 function Control(props) {
     const[movesCounter, setMovesCounter] = useState(0);
-    console.log(props.fetchDate);
 
     return (
         <div className="control">
-            <button className="control__button" onClick={props.fetchDate}>
+            <button className="control__newGame" onClick={props.fetchDate}>
                 New Game
+            </button>
+            <button className="control__updateImages" onClick={props.fetchDate}>
+                Update Images
             </button>
             <span className="control__movesCounter">
                 Moves: {movesCounter}

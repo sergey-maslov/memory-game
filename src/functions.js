@@ -1,9 +1,12 @@
-export function shuffleArray(array) {
-    console.log(array);
-    let randomArray = [];
-    while (randomArray.length < 12) {
-        randomArray.push(array[Math.floor(Math.random() * 563)]);
-    }
+import background from './background.jpg';
+
+export function randomArray(array) {
+    let randomArray = array.splice(Math.floor(Math.random() * (563 - 10)), 10);
+    randomArray.map(item => item.background = {background})
     console.log(randomArray);
     return randomArray;
+}
+
+export function newData(array) {
+
 }

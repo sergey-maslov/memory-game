@@ -6,7 +6,11 @@
     flex-direction: column;
 }
 
-.control__button {
+.control__newGame {
+    margin-top: 20px;
+}
+
+.control__updateImages {
     margin-top: 20px;
 }
 

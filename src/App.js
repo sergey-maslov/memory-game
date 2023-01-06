@@ -24,7 +24,7 @@ function App() {
   return (
     <div className='app'>
       <Control fetchDate={ fetchDate }/>
-      <Playfield data={cardsData}/>
+      <Playfield data={ cardsData }/>
     </div>
   )
 }

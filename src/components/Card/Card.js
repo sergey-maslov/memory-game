@@ -2,9 +2,9 @@ import React from "react";
 
 function Card(props) {
     return (
-        <div className="card" key={props.id}>
+        <div className="card">
             <span>{props.name}</span>
-            <img src={props.img} alt={props.slug}></img>
+            <img src={props.img} alt={props.alt}></img>
         </div>
     )
 }

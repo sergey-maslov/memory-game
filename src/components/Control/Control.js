@@ -2,12 +2,13 @@ import React from "react";
 import './Control.css'
 import { useState } from "react";
 
-function Control() {
+function Control(props) {
     const[movesCounter, setMovesCounter] = useState(0);
+    console.log(props.fetchDate);
 
     return (
         <div className="control">
-            <button className="button">
+            <button className="button" onClick={props.fetchDate}>
                 New Game
             </button>
             <span className="movesCounter">

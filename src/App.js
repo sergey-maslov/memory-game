@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Control />
+      <Control fetchDate={ fetchDate }/>
       <Playfield data={cardsData}/>
     </div>
   )

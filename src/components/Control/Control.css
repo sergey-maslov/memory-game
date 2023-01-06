@@ -1,5 +1,19 @@
 .control {
+    padding-top: 50px;
+    min-width: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.control__button {
+    margin-top: 20px;
+}
+
+.control__movesCounter {
+    margin-top: 20px;
+}
+
+.control__timer {
+    margin-top: 20px;
 }

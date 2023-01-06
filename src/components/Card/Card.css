@@ -1,6 +1,7 @@
 .card {
+    width: 120px;
     background-color: rgb(30, 67, 168);
-    margin: 40px;
+    margin: 10px;
     padding: 10px;
     color: white;
     border-radius: 25px;;
@@ -9,10 +10,16 @@
     align-items: center;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 .card__image {
     border-radius: 20px;
 }
 
 .card__title {
     margin-top: 5px;
+    text-align: center;
+    overflow: hidden;
 }

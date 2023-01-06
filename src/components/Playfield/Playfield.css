@@ -1,0 +1,5 @@
+.playfield {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}

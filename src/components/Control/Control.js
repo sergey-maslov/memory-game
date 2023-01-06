@@ -8,13 +8,13 @@ function Control(props) {
 
     return (
         <div className="control">
-            <button className="button" onClick={props.fetchDate}>
+            <button className="control__button" onClick={props.fetchDate}>
                 New Game
             </button>
-            <span className="movesCounter">
+            <span className="control__movesCounter">
                 Moves: {movesCounter}
             </span>
-            <span className="timer">
+            <span className="control__timer">
                 Time: {`00:00`}
             </span>
         </div>
